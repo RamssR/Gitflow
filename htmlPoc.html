@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>
+                Contact form
+        </title>
+        <link rel="stylesheet" type="text/css" media="screen" href="contactform.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+        <h3 class="text-center">Contact details</h3>
+
+        <div class="form-group">
+                <label for="name">Name
+                        <span class="mandatory">*</span>
+                </label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name.." />
+        </div>
+        <div class="form-group">
+                <label for="mobilenumber">Mobile number
+                        <span class="mandatory">*</span>
+                </label>
+                <input type="number" class="form-control" id="mobilenumber" name="mobile number" placeholder="Enter your number.." required>
+        </div>
+        <div class="form-group">
+                <label for="dob">D.O.B</label>
+                <input type="date" class="form-control" id="dob" name="dob">
+        </div>
+        <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address..">
+        </div>
+        <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" class="form-control" name="address" placeholder="Enter your address.."></textarea>
+        </div>
+        <div class="form-group">
+                <label for="state">State</label>
+                <select name="state" class="form-control" id="state">
+                        <option value="">-------Select State------</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Karnataka">Karnataka</option>
+                </select>
+        </div>
+        <input type="button" class="btn btn-outline-secondary" onclick="main(this.id)" id="submit" value="Submit">
+        <input type="button" class="btn btn-outline-secondary" onclick="main(this.id)" id="update" value="Update">
+        <input type="button" class="btn btn-outline-secondary" onclick="main(this.id)" id="clear" value="Clear">
+        <input type="button" class="btn btn-outline-secondary" onclick="main(this.id)" id="cancel" value="Cancel">
+        <table id="table" class="table table-bordered">
+                <thead>
+                        <tr>
+                                <td>NAME</td>
+                                <td>MOBILE NUMBER</td>
+                                <td>DOB</td>
+                                <td>EMAIL</td>
+                                <td>ADDRESS</td>
+                                <td>STATE</td>
+                                <td>DELETE</td>
+                                <td>EDIT</td>
+                        </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+        </table>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="tsContactForm.js" onload="this.addRow()"></script>
+</body>
+</html>
